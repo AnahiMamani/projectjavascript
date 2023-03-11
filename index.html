@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <script>
+        function soma(){
+            var a=eval(document.cal.n1.value);
+            var b=eval(document.cal.n2.value);
+            var c=a+b;
+            document.cal.total.value=c;
+        }
+        function subtracao(){
+            var a=eval(document.cal.n1.value);
+            var b=eval(document.cal.n2.value);
+            var c=a-b;
+            document.cal.total.value=c;
+        }
+        function multiplicacao(){
+            var a=eval(document.cal.n1.value);
+            var b=eval(document.cal.n2.value);
+            var c=a*b;
+            document.cal.total.value=c;
+        }
+        function divisao(){
+            var a=eval(document.cal.n1.value);
+            var b=eval(document.cal.n2.value);
+            var c=a/b;
+            document.cal.total.value=c;
+        }
+    </script>
+</head>
+<body>
+    <form name="cal">
+        <h2>CALCULADORA</h2>
+            <input type="text" size="25" placeholder="1º valor" name="n1">
+        <br>
+            <input type="text" size="25" placeholder="2º valor" name="n2">
+        <br><br>
+            <input type="button" size="15" value="+" onclick="soma()">
+            <input type="button" size="15" value="-" onclick="subtracao()">
+            <input type="button" size="15" value="x" onclick="multiplicacao()">
+            <input type="button" size="15" value="/" onclick="divisao()">
+            <input type="button" size="15" value="=" >
+            <input type="text" size="5" placeholder="Resultado" name="total">
+        <br><br>
+            <input type="reset" size="15" value="clear">
+
+        <p id="demo"></p>
+    </form>
+  
+</body>
+</html>
